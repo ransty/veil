@@ -19,7 +19,7 @@ jobs:
     name: Build signed Android artifacts
     runs-on: ubuntu-latest
     env:
-      RELEASE_TAG: ${{ github.sha }}
+      RELEASE_TAG: "v1.0.0-${{ github.workflow_sha }}"
 
     steps:
       - name: Checkout repository
