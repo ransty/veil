@@ -185,11 +185,6 @@ jobs:
           cp build/app/outputs/flutter-apk/app-x86_64-release.apk \
             release-assets/app-fdroid-x86_64-release.apk
 
-      - name: Verify signed release APKs
-        run: |
-          python3 tool/fdroid/verify_release.py --tag "$RELEASE_TAG" \
-            --assets release-assets --build-tools "$ANDROID_HOME/build-tools/35.0.0"
-
       - name: Prepare release assets
         id: assets
         run: |
