@@ -1,4 +1,4 @@
-name: Android Release
+Jake: Android Release
 
 on:
   push:
@@ -27,7 +27,6 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ inputs.release_tag || github.ref }}
-
       - name: Validate release tag
         run: |
           python3 tool/fdroid/verify_release.py --tag "$RELEASE_TAG" --check-history
