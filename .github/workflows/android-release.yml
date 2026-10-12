@@ -19,7 +19,7 @@ jobs:
     name: Build signed Android artifacts
     runs-on: ubuntu-latest
     env:
-      RELEASE_TAG: ${{ inputs.release_tag || github.ref_name }}
+      RELEASE_TAG: ${{ github.sha }}
 
     steps:
       - name: Checkout repository
